@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Patient Medication Tracker</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Patient Medication Tracker</h1>
+            <nav>
+                <ul>
+                    <li><a href="#register">Register Patient</a></li>
+                    <li><a href="#view">View Patient</a></li>
+                    <li><a href="#all">All Patients</a></li>
+                    <li><a href="#probability">Medication Adherence Probability</a></li>
+                </ul>
+            </nav>
+        </header>
+
+        <main>
+            <section id="register" class="section">
+                <h2>Register Patient</h2>
+                <form id="registerForm">
+                    <div class="form-group">
+                        <label for="name">Name:</label>
+                        <input type="text" id="name" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="patient_id">Patient ID:</label>
+                        <input type="number" id="patient_id" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="medicine_taken">Medicine Taken:</label>
+                        <select id="medicine_taken" required>
+                            <option value="true">Yes</option>
+                            <option value="false">No</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="slot">Time Slot:</label>
+                        <select id="slot" required>
+                            <option value="1">Morning (1)</option>
+                            <option value="2">Afternoon (2)</option>
+                            <option value="3">Evening (3)</option>
+                        </select>
+                    </div>
+                    <button type="submit">Register</button>
+                </form>
+                <div id="registerResult" class="result"></div>
+            </section>
+
+            <section id="view" class="section">
+                <h2>View Patient Data</h2>
+                <form id="viewForm">
+                    <div class="form-group">
+                        <label for="viewPatientId">Patient ID:</label>
+                        <input type="number" id="viewPatientId" required>
+                    </div>
+                    <button type="submit">View Data</button>
+                </form>
+                <div id="viewResult" class="result">
+                    <div id="patientInfo"></div>
+                    <div id="patientData"></div>
+                </div>
+            </section>
+
+            <section id="all" class="section">
+                <h2>All Patients</h2>
+                <button id="getAllPatients">Load All Patients</button>
+                <div id="allPatientsResult" class="result"></div>
+            </section>
+
+            <section id="probability" class="section">
+                <h2>Medication Adherence Probability</h2>
+                <form id="probabilityForm">
+                    <div class="form-group">
+                        <label for="probPatientId">Patient ID:</label>
+                        <input type="number" id="probPatientId" required>
+                    </div>
+                    <button type="submit">Check Probability</button>
+                </form>
+                <div id="probabilityResult" class="result">
+                    <div id="probChart">
+                        <div class="slot">
+                            <label>Morning (Slot 1)</label>
+                            <div class="bar-container">
+                                <div id="slot1Bar" class="bar"></div>
+                                <span id="slot1Prob">0%</span>
+                            </div>
+                        </div>
+                        <div class="slot">
+                            <label>Afternoon (Slot 2)</label>
+                            <div class="bar-container">
+                                <div id="slot2Bar" class="bar"></div>
+                                <span id="slot2Prob">0%</span>
+                            </div>
+                        </div>
+                        <div class="slot">
+                            <label>Evening (Slot 3)</label>
+                            <div class="bar-container">
+                                <div id="slot3Bar" class="bar"></div>
+                                <span id="slot3Prob">0%</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <footer>
+            <p>Patient Medication Tracker © 2023</p>
+        </footer>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html> 

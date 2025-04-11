@@ -1,0 +1,216 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+    color: #333;
+    background-color: #f4f7f9;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+header {
+    background-color: #4a6fa5;
+    color: white;
+    padding: 20px;
+    border-radius: 8px 8px 0 0;
+}
+
+header h1 {
+    margin-bottom: 15px;
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+}
+
+nav ul li {
+    margin-right: 20px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    padding: 5px 10px;
+    border-radius: 4px;
+    transition: background-color 0.3s;
+}
+
+nav ul li a:hover {
+    background-color: #3a5a8a;
+}
+
+main {
+    background-color: white;
+    padding: 20px;
+    border-radius: 0 0 8px 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.section {
+    margin-bottom: 40px;
+    padding-bottom: 20px;
+    border-bottom: 1px solid #eee;
+}
+
+.section h2 {
+    margin-bottom: 20px;
+    color: #4a6fa5;
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: 600;
+}
+
+input, select {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 16px;
+}
+
+button {
+    background-color: #4a6fa5;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background-color: #3a5a8a;
+}
+
+.result {
+    margin-top: 20px;
+    background-color: #f9f9f9;
+    padding: 15px;
+    border-radius: 4px;
+    border-left: 4px solid #4a6fa5;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 10px;
+}
+
+table, th, td {
+    border: 1px solid #ddd;
+}
+
+th, td {
+    padding: 10px;
+    text-align: left;
+}
+
+th {
+    background-color: #f4f7f9;
+}
+
+.success-message {
+    color: #2e7d32;
+    background-color: #e8f5e9;
+    padding: 10px;
+    border-radius: 4px;
+}
+
+.error-message {
+    color: #c62828;
+    background-color: #ffebee;
+    padding: 10px;
+    border-radius: 4px;
+}
+
+footer {
+    text-align: center;
+    margin-top: 40px;
+    color: #666;
+}
+
+/* Probability chart styling */
+#probChart {
+    margin-top: 20px;
+}
+
+.slot {
+    margin-bottom: 20px;
+}
+
+.bar-container {
+    display: flex;
+    align-items: center;
+    height: 30px;
+    margin-top: 5px;
+}
+
+.bar {
+    background-color: #f44336;
+    height: 100%;
+    width: 0%;
+    transition: width 0.5s ease-in-out;
+}
+
+.bar-container span {
+    margin-left: 10px;
+    font-weight: bold;
+}
+
+/* Patient cards styling */
+.patient-card {
+    background-color: #fff;
+    border-radius: 8px;
+    padding: 15px;
+    margin-bottom: 15px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    border-left: 4px solid #4a6fa5;
+    transition: transform 0.2s;
+}
+
+.patient-card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+}
+
+.patient-card h3 {
+    color: #4a6fa5;
+    margin-bottom: 8px;
+}
+
+.patient-card p {
+    margin-bottom: 10px;
+    color: #555;
+}
+
+.patient-card button {
+    margin-top: 10px;
+}
+
+@media (max-width: 768px) {
+    nav ul {
+        flex-direction: column;
+    }
+    
+    nav ul li {
+        margin-bottom: 10px;
+    }
+} 
